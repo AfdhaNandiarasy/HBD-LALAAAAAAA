@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My FRIENDDD (BESTPLENDKUUU LALA🤍)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <style>
+        * { outline: none !important; }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: url('assets/image/pink background.avif'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            font-family: 'Concert One', cursive;
+        }
+
+        .bodi {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .bodi::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(255, 255, 255, 0.2); 
+            z-index: 1;
+        }
+
+        #pembuka {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: #f7d9d9; 
+            z-index: 10000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: inset 0 0 100px rgba(0,0,0,0.05); 
+        }
+
+        .card {
+            background-color: #f2c2c2 !important; 
+            border: none !important;
+            border-radius: 15px !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15); 
+            z-index: 2; 
+            position: relative;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .judul { 
+            color: #fff1f1; 
+            font-size: 1.2rem; 
+            margin-bottom: 5px; 
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .subjudul { 
+            color: #d88b8b;
+            font-size: 1.5rem; 
+        }
+
+        .tombol {
+            background: #d88b8b; 
+            border: none;
+            border-radius: 6px;
+            color: #fff1f1; 
+            padding: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .tombol:hover {
+            background: #fff1f1;
+            color: #d88b8b; 
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(247, 217, 217, 0.7); 
+            animation: ripple 15s infinite;
+            z-index: 1; 
+        }
+        .small { width: 100px; height: 100px; left: -50px; bottom: -50px; }
+        .medium { width: 200px; height: 200px; left: -100px; bottom: -100px; }
+        .large { width: 400px; height: 400px; left: -200px; bottom: -200px; }
+        .xlarge { width: 600px; height: 600px; left: -300px; bottom: -300px; }
+        
+        .shade2 { opacity: 0.3; }
+        .shade3 { opacity: 0.5; }
+        .shade4 { opacity: 0.6; }
+        .shade5 { opacity: 0.7; }
+
+        @keyframes ripple {
+            0%, 100% { transform: scale(0.8); }
+            50% { transform: scale(1.2); }
+        }
+
+        #loader {
+            position: fixed;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+        }
+
+        .animate-bottom {
+            position: relative;
+            animation: animatebottom 1s;
+        }
+
+        @keyframes animatebottom {
+            from { bottom: -50px; opacity: 0; }
+            to { bottom: 0; opacity: 1; }
+        }
+
+        .modal-content { 
+            background-color: #f7d9d9 !important; 
+            border: none; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .modal-body { 
+            color: #d88b8b !important;
+            font-weight: bold; 
+            line-height: 1.6; 
+        }
+        .close { color: #d88b8b; } 
+
+        #btnGift {
+            display: none;
+            margin-top: 20px;
+            animation: animatebottom 0.5s;
+        }
+    </style>
+</head>
+
+<body class="bodi">
+
+    <div id="pembuka">
+        <div style="margin-bottom: 20px;">
+            <img src="https://gifdb.com/images/high/bubu-dudu-butt-bump-dance-ir9b4l440opi2b3d.gif" 
+                 width="180px" 
+                 alt="Bubu Dudu Dance" 
+                 style="border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        </div>
+        <h2 style="color: #d88b8b; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">Halo Lalaaaaaaaaaaaaaaaaaaa😄! 🐨</h2>
+        <p style="color: #8c6c6c;">Ada pesan buat kamu...</p>
+        <button onclick="bukaSekarang()" class="tombol" style="padding: 10px 30px; border-radius: 20px;">Buka Pesan 💌</button>
+    </div>
+
+    <div id="loader" style="display:none;">
+        <img src="https://i.pinimg.com/originals/a4/f2/cb/a4f2cb80ff2ae2772e80bf30e9d78d4c.gif" width="80px">
+    </div>
+
+    <div class="container" style="display:none;" id="Kontener">
+        <div class="ripple-background">
+            <div class="circle xlarge shade2"></div>
+            <div class="circle large shade3"></div>
+            <div class="circle medium shade4"></div>
+            <div class="circle small shade5"></div>
+        </div>
+
+        <div class="row justify-content-center animate-bottom">
+            <div class="col-md-6 col-11">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <p class="judul">Happy Birthday BESTPLENDKUUU LALA</p>
+                        <h2 class="subjudul">HEPIBESDEY LALA KOALA 🐨</h2>
+                        <hr style="border-color: rgba(255,255,255,0.3);">
+
+                        <div id="karosel" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img src="assets/image/lala1.png" alt="Lala 1"></div>
+                                <div class="carousel-item"><img src="assets/image/lala2.png" alt="Lala 2"></div>
+                                <div class="carousel-item"><img src="assets/image/lala3.png" alt="Lala 3"></div>
+                                <div class="carousel-item"><img src="assets/image/lala4.png" alt="Lala 4"></div>
+                            </div>
+                        </div>
+
+                        <hr style="border-color: rgba(255,255,255,0.3);">
+                        <button type="button" class="tombol" style="width: 100%;" data-toggle="modal" data-target="#Modalmuncul" onclick="Mainkannn(); Gassngetik();"> ✨
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="Modalmuncul" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" style="color: #d88b8b;">Special Wish For LALAAAA</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p id="tekss"></p>
+                    
+                    <button id="btnGift" class="tombol" style="width: 100%;" data-toggle="modal" data-target="#ModalGift" data-dismiss="modal">🎁
+                    </button>
+
+                    <br><br> <small style="color: #8c6c6c;">~ Arachi yang imut.</small>
+                </div>
+                <audio id="lagu" src="assets/lagu/lagu.mp3" preload="auto"></audio>
+                <div class="modal-footer border-0">
+                    <button type="button" class="tombol" data-dismiss="modal" onclick="Mainkannn();">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal fade" id="ModalGift" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" style="color: #d88b8b;">Special Gift For You 🎁</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="assets/image/ava.png" 
+                     style="width: 100%; 
+                            max-height: 300px; /* Batasi tinggi maksimal agar tidak kepanjangan */
+                            object-fit: contain; /* Memastikan foto tidak gepeng/terpotong */
+                            border-radius: 10px; 
+                            margin-bottom: 15px;" 
+                     alt="Gift">
+                <p>Ini hadiah kecil buat LALAAAAAAAAAA ! LALANYAAAA KAPANNNN 😝😝😝 🐨💖</p>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="tombol" data-dismiss="modal"> 🥰</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <script>
+        var snowStorm = null;
+        function SnowStorm() {
+            this.flakesMax = 40; 
+            this.flakesMaxActive = 30;
+            this.animationInterval = 33;
+            this.snowCharacter = '<span style="color: #f7d9d9; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">🐨</span>'; 
+            this.snowStick = false;
+            this.useMeltEffect = true;
+            this.zIndex = 10;
+            var s = this; var storm = this; this.flakes = []; this.active = false;
+            var screenX = null; var screenY = null;
+            this.init = function() {
+                for (var i = 0; i < this.flakesMax; i++) {
+                    this.flakes.push(new this.SnowFlake(this));
+                }
+                setInterval(this.snow, this.animationInterval);
+            };
+            this.SnowFlake = function(parent) {
+                this.o = document.createElement('div');
+                this.o.innerHTML = parent.snowCharacter;
+                this.o.style.position = 'fixed';
+                this.o.style.zIndex = parent.zIndex;
+                this.o.style.top = '-20px';
+                this.refresh = function() { this.o.style.left = this.x + 'px'; this.o.style.top = this.y + 'px'; };
+                this.recycle = function() {
+                    this.x = Math.random() * window.innerWidth;
+                    this.y = Math.random() * -window.innerHeight;
+                    this.vY = 1 + Math.random() * 2; 
+                };
+                this.recycle(); document.body.appendChild(this.o);
+            };
+            this.snow = function() {
+                for (var i = 0; i < s.flakes.length; i++) {
+                    s.flakes[i].y += s.flakes[i].vY;
+                    if (s.flakes[i].y > window.innerHeight) s.flakes[i].recycle();
+                    s.flakes[i].refresh();
+                }
+            };
+        }
+        snowStorm = new SnowStorm();
+    </script>
+
+    <script>
+        function bukaSekarang() {
+            document.getElementById("pembuka").style.display = "none";
+            document.getElementById("loader").style.display = "block";
+            setTimeout(function() {
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("Kontener").style.display = "block";
+                snowStorm.init(); 
+            }, 2000);
+        }
+
+        function Mainkannn() {
+            var lagu = document.getElementById("lagu");
+            return lagu.paused ? lagu.play() : lagu.pause();
+        }
+
+        var i = 0;
+        var txt = "Kekuatan ucapan adalah sebagian dari doa, dan doa yang tulus akan selalu di kabulkan. Semoga di hari lahir lalaa ini akan membawa keberkahan dan kesuksesan di masa depan lalaa kelak, Aamiin. Selamat ulang tahun buat maa plenddddd 🐨🤍 yang paling lucuk, gemash , kiyowo emnih , semoga lalaaaa sehat selaluuuu & panjang umurnyaaaaaaaaa , semogaaaaa lalaaa dilancarkan rezekinyaaaaaaaaa , dan yang di harapkan atau di inginkan segera di kabulkan , aminnnnnnn yarobbal alaminnnnnnnnnn, oh iya semogaaa sama mingyunya langgeng undang aku ya request booth matcha.😝";
+        
+        function Gassngetik() {
+            if (i === 0) {
+                document.getElementById("tekss").innerHTML = ""; 
+                document.getElementById("btnGift").style.display = "none";
+            }
+            
+            if (i < txt.length) {
+                document.getElementById("tekss").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(Gassngetik, 60); 
+            } else {
+ 
+                document.getElementById("btnGift").style.display = "block";
+                i = 0; 
+            }
+        }
+    </script>
+</body>
+</html>
